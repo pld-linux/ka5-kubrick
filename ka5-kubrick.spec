@@ -1,15 +1,16 @@
-%define		kdeappsver	18.12.1
+%define		kdeappsver	19.04.1
+%define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kubrick
 Summary:	kubrick
 Summary(pl.UTF-8):	kubrick
 Name:		ka5-%{kaname}
-Version:	18.12.1
+Version:	19.04.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	306de7e0c19966b36141f6fd26058bdb
+# Source0-md5:	876b9eb58b13cb8b74bbc5531a1b47b8
 URL:		http://www.kde.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	Qt5Core-devel
@@ -21,16 +22,16 @@ BuildRequires:	Qt5Svg-devel
 BuildRequires:	Qt5Widgets-devel
 BuildRequires:	gettext-devel
 BuildRequires:	ka5-libkdegames-devel >= %{kdeappsver}
-BuildRequires:	kf5-extra-cmake-modules >= 5.30.0
-BuildRequires:	kf5-kconfig-devel >= 5.30.0
-BuildRequires:	kf5-kconfigwidgets-devel >= 5.30.0
-BuildRequires:	kf5-kcoreaddons-devel >= 5.30.0
-BuildRequires:	kf5-kcrash-devel >= 5.30.0
-BuildRequires:	kf5-kdoctools-devel >= 5.30.0
-BuildRequires:	kf5-ki18n-devel >= 5.30.0
-BuildRequires:	kf5-kio-devel >= 5.30.0
-BuildRequires:	kf5-kwidgetsaddons-devel >= 5.30.0
-BuildRequires:	kf5-kxmlgui-devel >= 5.30.0
+BuildRequires:	kf5-extra-cmake-modules >= %{kframever}
+BuildRequires:	kf5-kconfig-devel >= %{kframever}
+BuildRequires:	kf5-kconfigwidgets-devel >= %{kframever}
+BuildRequires:	kf5-kcoreaddons-devel >= %{kframever}
+BuildRequires:	kf5-kcrash-devel >= %{kframever}
+BuildRequires:	kf5-kdoctools-devel >= %{kframever}
+BuildRequires:	kf5-ki18n-devel >= %{kframever}
+BuildRequires:	kf5-kio-devel >= %{kframever}
+BuildRequires:	kf5-kwidgetsaddons-devel >= %{kframever}
+BuildRequires:	kf5-kxmlgui-devel >= %{kframever}
 BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -51,6 +52,7 @@ install -d build
 cd build
 %cmake \
 	-G Ninja \
+	-DHTML_INSTALL_DIR=%{_kdedocdir} \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
 	..
 %ninja_build
