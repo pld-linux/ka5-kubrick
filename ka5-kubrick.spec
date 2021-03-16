@@ -1,16 +1,16 @@
-%define		kdeappsver	19.04.1
+%define		kdeappsver	20.12.3
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kubrick
 Summary:	kubrick
 Summary(pl.UTF-8):	kubrick
 Name:		ka5-%{kaname}
-Version:	19.04.1
+Version:	20.12.3
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	876b9eb58b13cb8b74bbc5531a1b47b8
+Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	3047d8691d919794a1a7e8a285e7becf
 URL:		http://www.kde.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	Qt5Core-devel
@@ -68,7 +68,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-/etc/xdg/kubrick.categories
 %attr(755,root,root) %{_bindir}/kubrick
 %{_desktopdir}/org.kde.kubrick.desktop
 %{_iconsdir}/hicolor/128x128/apps/kubrick.png
@@ -81,3 +80,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/kxmlgui5/kubrick
 %{_datadir}/kxmlgui5/kubrick/kubrickui.rc
 %{_datadir}/metainfo/org.kde.kubrick.appdata.xml
+%{_datadir}/qlogging-categories5/kubrick.categories
