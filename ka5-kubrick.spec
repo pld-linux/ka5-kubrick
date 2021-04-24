@@ -1,16 +1,16 @@
-%define		kdeappsver	20.12.3
+%define		kdeappsver	21.04.0
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kubrick
 Summary:	kubrick
 Summary(pl.UTF-8):	kubrick
 Name:		ka5-%{kaname}
-Version:	20.12.3
+Version:	21.04.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	3047d8691d919794a1a7e8a285e7becf
+# Source0-md5:	2e6101ffa55c9d3bd7251e4bb8c55f99
 URL:		http://www.kde.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	Qt5Core-devel
