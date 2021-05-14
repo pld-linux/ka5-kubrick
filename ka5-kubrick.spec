@@ -13,6 +13,7 @@ Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kana
 # Source0-md5:	2e6101ffa55c9d3bd7251e4bb8c55f99
 URL:		http://www.kde.org/
 BuildRequires:	OpenGL-devel
+BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	Qt5Core-devel
 BuildRequires:	Qt5Gui-devel >= 5.11.1
 BuildRequires:	Qt5OpenGL-devel
