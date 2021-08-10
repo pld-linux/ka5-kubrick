@@ -45,6 +45,13 @@ selection of puzzles at several levels of difficulty, as well as demos
 of pretty patterns and solution moves, or you can make up your own
 puzzles.
 
+%description -l pl.UTF-8
+Kubrick jest oparty na kostce Rubika z rozmiarami kostki w zakresie
+od 2x2x2 do 6x6x6, a także nieregularnymi kształtami, takimi jak:
+5x3x2, 6x4x1 czy 2x2x1. Gra zawiera wybór zagadek do rozwiązania
+różnego poziomu trudności, a także dema, ciekawe wzory, a także
+rozwiązania. Możesz także tworzyć własne układy.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
